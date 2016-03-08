@@ -1,1 +1,1 @@
-# PhoneGapBuild
+# PhoneGapBuild config.xml
