@@ -27,23 +27,22 @@
 
     <plugin name="cordova-plugin-splashscreen" source="npm" />
     <plugin name="cordova-plugin-whitelist" version="1.0.0" source="npm" />
-    <plugin name="org.apache.cordova.device" version="0.3.0" />
-    <plugin name="org.apache.cordova.device-orientation" version="0.3.11" />
-    <plugin name="org.apache.cordova.geolocation" version="0.3.12" />
-    <plugin name="org.apache.cordova.network-information" version="0.2.15" />
+    <plugin name="cordova-plugin-device" version="0.3.0" source="npm" />
+    <plugin name="cordova-plugin-device-orientation" source="npm" />
+    <plugin name="cordova-plugin-geolocation" source="npm" />
+    <plugin name="cordova-plugin-network-information" source="npm" />
     <plugin name="cordova-plugin-inappbrowser" source="npm" />
     <plugin name="cordova-plugin-statusbar" source="npm"  />
 
-    <config-file platform="ios" parent="CFBundleShortVersionString">
+    <gap:config-file platform="ios" parent="CFBundleShortVersionString">
         <string>175</string>
-    </config-file>
-
-    <config-file platform="ios" parent="NSLocationAlwaysUsageDescription" overwrite="false">
-        <string>Always Allow GPS</string>
-    </config-file>
-    <config-file platform="ios" parent="NSLocationWhenInUseUsageDescription" overwrite="false">
-        <string>Allow GPS when in use</string>
-    </config-file>
+    </gap:config-file>
+    <gap:config-file platform="ios" parent="NSLocationAlwaysUsageDescription" overwrite="false">
+        <string>Darf "PTC GPS App" auf Ihren Standort zugreifen, wenn Sie die App benutzen?</string>
+    </gap:config-file>
+    <gap:config-file platform="ios" parent="NSLocationWhenInUseUsageDescription" overwrite="false">
+        <string>Darf "PTC GPS App" auf Ihren Standort zugreifen, wenn Sie die App benutzen?</string>
+    </gap:config-file>
 
     <!-- UNCOMMENT FOR DEBUGGING - ->
     <config-file platform="android" parent="/manifest">
@@ -67,11 +66,12 @@
 
     <!-- Customize your app and platform with the preference element. -->
     <platform name="ios">
-        <preference name="phonegap-version" value="cli-5.2.0" />
+        <preference name="phonegap-version" value="cli-6.0.0" />
     </platform>
     <platform name="android">
         <preference name="phonegap-version" value="cli-6.0.0" />
     </platform>         <!-- all: current version of PhoneGap -->
+    
     <preference name="orientation"                value="default" />        <!-- all: default means both landscape and portrait are enabled -->
     <preference name="target-device"              value="universal" />      <!-- all: possible values handset, tablet, or universal -->
     <preference name="fullscreen"                 value="false" />          <!-- all: hides the status bar at the top of the screen -->
